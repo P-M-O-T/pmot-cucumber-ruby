@@ -1,3 +1,4 @@
+@ pmot
 Feature: Signed in subscriber can navigate to myFT
 
   Scenario Outline: Navigate to myFT from the home page myFT icon

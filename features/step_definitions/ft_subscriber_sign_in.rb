@@ -1,12 +1,4 @@
-require 'watir-webdriver'
-require 'cucumber'
-require 'capybara/cucumber'
-require 'rspec'
-require 'pry'
-
-
 Given(/^I am on the "([^"]*)" page$/) do |arg|
-  @browser = Watir::Browser.new :ff
   @browser.goto "https://accounts.ft.com/login"
 end
 
