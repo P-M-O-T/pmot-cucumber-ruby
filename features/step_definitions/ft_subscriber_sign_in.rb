@@ -23,7 +23,11 @@ Then(/^I should be logged in successfully$/) do
 end
 
 And(/^I should see My Account$/) do
-  # binding.pry
-  # result = true if @browser.should have_css('#o-header-nav-desktop .o-header__nav-list--right')
-  # expect(result).to be true
+  result = true if @browser.should have_css('#o-header-nav-desktop')
+  expect(result).to be true
+end
+
+And(/^I should see "([^"]*)"$/) do |text|
+  result = true if @browser.text.include? text
+  expect(result).to be true
 end
