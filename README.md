@@ -12,6 +12,7 @@ Open Menu > more tools > Developer tools [select] Console
 Here you can interrogate a web page using javascripts
 
 $('*') - a command like this will return you the whole html
+
 $('#o-header-nav-desktop > div > ul.o-header__nav-list.o-header__nav-list--right > li:nth-child(2) > a').text - a command like this will return you the text of a css locator
 
 
