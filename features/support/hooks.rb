@@ -3,6 +3,8 @@ require 'cucumber'
 require 'capybara/cucumber'
 require 'rspec'
 require 'pry'
+require 'site_prism'
+
 
 Before do
   @browser = Watir::Browser.new :chrome

@@ -31,3 +31,8 @@ And(/^I should see "([^"]*)"$/) do |text|
   result = true if @browser.text.include? text
   expect(result).to be true
 end
+
+And(/^I click Sign in button$/) do
+  @login = PageHelper.new
+  @login.login.submit_button.click
+end
