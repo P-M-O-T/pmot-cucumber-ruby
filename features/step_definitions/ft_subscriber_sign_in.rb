@@ -1,8 +1,11 @@
 Given(/^I am on the "([^"]*)" page$/) do |arg|
   @browser.goto "https://accounts.ft.com/login"
+  @login = PageHelper.new
 end
 
 When(/^I fill in "([^"]*)" field with "([^"]*)"$/) do |field_name, value|
+  @login.successful_login(field_name, value)
+=begin
   case field_name
     when "email address"
     @browser.text_field(:name => 'email').set(value)
@@ -11,10 +14,13 @@ When(/^I fill in "([^"]*)" field with "([^"]*)"$/) do |field_name, value|
     else
     puts "invalid field name"
   end
+=end
 end
 
 And(/^I click "([^"]*)" button$/) do |button|
-  @browser.element(:css => '#submit-btn').click
+  #@browser.element(:css => '#submit-btn').click
+  @login.element(:css => '#submit-btn').click
+
 end
 
 Then(/^I should be logged in successfully$/) do
@@ -33,6 +39,6 @@ And(/^I should see "([^"]*)"$/) do |text|
 end
 
 And(/^I click Sign in button$/) do
-  @login = PageHelper.new
-  @login.login.submit_button.click
+pending
 end
+
