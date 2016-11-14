@@ -23,7 +23,7 @@ Then(/^I should be logged in successfully$/) do
 end
 
 And(/^I should see My Account$/) do
-  result = true if @browser.should have_css('#o-header-nav-desktop')
+  result = true if @browser.should have_css('#o-header-nav-desktop [data-trackable = "My Account"]')
   expect(result).to be true
 end
 
